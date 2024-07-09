@@ -1,0 +1,270 @@
+Configuración inicial:
+    git --version
+    git config --global user.name "Omar Filio"
+    git config --global user.emai sub_mk@hotmail
+    git config --global user.ui true
+    git config --list
+
+Configurar Visual Studio como editor principal para la configuración de git
+    git config --global core.editor "code --wait"
+
+Editar la configuración global de git:
+    git config --global -e
+
+Estandarizar los saltos de línea en los archivos que se crean en Windows:
+    git config --global core.autocrlf true
+
+Todas las opciones de configuración de la terminal:
+    git config -h
+
+Todas las opciones de configuración en el navegador:
+    git help config
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Inicializar un directorio local:
+    mkdir 'carpeta'
+    cd 'carpeta'
+    touch README.md
+    touch .gitignore
+    git init (inicia el trackeo de la carpeta indicada)
+    code .
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Flujo básico de Git:
+    - Modified: Se encuentra en Local, es la carpeta de trabajo en la que están todos los archivos que se están editando
+        git add . (se agregan los cambios realizados al índice de git)
+
+    - Staged: Es donde se encuentran indexados todos los cambios que se llevaron a cabo en el Local y que son indicados con el comando 'git add .'
+        git commit -m "mensaje descriptivo del cambio realizado" (se agregan los cambios de la etapa anterior al HEAD de git en Local)
+
+    - Commited: Es la etapa donde se encuentran los cambios finales que se enviarán al repositorio ya en línea
+        git remote add origin "https://github.com/usuario/dirección-web-del-repositorio.com" (agregar el repositorio principal a dónde serán cargados los archivos desde nuestro local)
+        git push -u origin master (indicar la rama a la que serán cargados los archivos desde nuestro local)
+
+    - Remote: Es ya el repositorio que se ecuentra en la red y en dónde estarán almacenados nuestros archivos
+        git push (si no se cambia de rama basta con ésta instrucción para cargar nuevos cambios)
+
+* Crear una nueva rama y establecerla como principal:
+    - git branch -M main
+
+* Si ya existe el repositorio:
+    - git branch -M main
+    - git remote add origin "https://github.com/usuario/repositorio.git"
+    - git push -u origin main
+
+* Cambiar de rama (ejempo de master a main, pasando el historial de master a la nueva rama main):
+    - git branch -m master main (se crea la rama main y se le pasa el historial de master)
+    - git push -u origin main (se indica el nuevo origin de la nueva rama)
+    - git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main (cambiar el HEAD actual a la nueva rama main)
+    - git push origin --delete master (una vez realiado el cambio de la rama desde el repositorio en GitHub, se puede eliminar la rama master)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Ignorar archivos:
+    - Se debe colocar en el archivo .gitignore los archivos y/o carpetas que no se quieran 'trackear' y se puede hacer de varias formas:
+
+        1.- Colocando directamente el nombre del archivo o carpeta:
+            archivo.ext
+            carpeta
+            /archivo_desde_raiz.ext
+
+        2.- Usando expresiones regulares para indicar un conjunto de archivos (por ejemplo) según su extensión:
+            *.log
+
+        3.- Indicando excepciones de algún tipo de archivo
+            !producción.log
+
+        4.- Ignorar los archivos terminados en .txt dentro de la carpeta doc, pero no en sus subcarpetas:
+            doc/*.txt
+
+        5.- Ignorar los archivos terminados en .txt dentro de la carpeta doc y también en sus subcarpetas:
+            doc/**/*.txt
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Clonar repositorios:
+    - Para clonar un repositorio solo se debe incicar con el siguiente comando:
+        git clone https://github.com/omar0369/curso-git-prueba1.git
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Ramas:
+    - Crear una rama:
+        git branch 'nombre-rama'
+
+    - Cambiar de rama (si ya existe):
+        git checkout 'nombre-rama'
+
+    - Crear una rama y cambiarte a ella:
+        git checkout -b 'nombre-rama'
+
+    - Eliminar una rama local:
+        git branch -d 'nombre-rama'
+
+    - Eliminar una rama local de forma forzada:
+        git branch -D 'nombre-rama'
+
+    - Eliminar una rama remota:
+        git push origin --delete 'nombre-rama-remota'
+
+    - Listar todas las ramas del repositorio:
+        git branch
+
+    - Listar ramas no fusionadas a la rama actual:
+        git branch --no-merged
+
+    - Listar ramas fusionadas a la rama actual:
+        git branch --merged
+
+    - Rebasar ramas: (significa mandar una rama, por ejemplo, que no se ha trabajado hace ya algún tiempo, a la cabecera de git por encima de la principal) (casi no se utiliza)
+        git checkout rama-secundaria
+        git rebase rama-principal
+
+    
+    1.- Fusión de ramas
+        - Es necesario colocarse en la rama padre (la que absorberá el nuevo contenido) y luego fusionar
+        - Existen dos posibles escenarios para realizar la fusión de ramas:
+            a) Fast-Forward: Cuando dos ramas no comparten archivos en común, no existen conflictos por resolver
+            b) Manual-merge: Cuando dos ramas sí tienen archivos en común y a éstos se les realizaron cambios, por tanto se deben resolver dichos confilctos de forma manual
+
+        -Para realizar la fusión se usa el siguiente comando:
+            git merge 'rama-secundaria'
+
+* Cambios:
+    Se pueden agregar cambios al último commit sin la necesidad de crear uno nuevo
+
+        -Sin editar el mensaje del último commit:
+            git commit --amend --no-edit
+
+        - Editando el mensaje del último commit:
+            git commit --amend -m "nuevo mensaje para el último commit"
+
+        - Eliminar el último commit:
+            git reset --hard HEAD~1 
+
+        - Cambiar a un commit en particular:
+            git checkout id-commit
+
+* Historial:
+    - Mostrar todo el historial de cambios
+        git log
+    
+    - Mostrar una sola línea por cambio
+        git log --oneline
+
+    - Guardar el log en una ruta y archivo especificado
+        git log > commits.txt
+
+    - Mostrar el historial con el formato que se especifique
+        git log --pretty=format "%h - %an, %ar : %s"
+
+    - Mostrar los 'n' cambios más recientes
+        git log -n
+
+    - Muestra los cambios realizados después de la fecha especificada
+        git log --after="2023-07-07 00:00:00"
+
+    - Mostrar los cambios realizados antes de la fecha especificada
+        git log --before="2023-07-07 00:00:00"
+
+    - Mostrar los cambios realizados en el rango de fechas especificada
+        git log --after="2023-07-07 00:00:00" --before="2023-08-07 00:00:00"
+
+    - Mostrar todo el registro de acciones del log incluyendo inserciones, cambios, eliminaciones, fusiones, etc
+        git reflog
+
+    - Mostrar diferencias entre el 'working directory' y el 'staging area'
+        git diff
+
+    - Mostrar de forma gráfica en la terminal el registro almacenado en el log
+        git log --oneline --graph --all
+
+* Reseteo del historial:
+    - Mostrar los archivos nuevos (no trackeados), borrados o editados
+        git status
+
+    - Borrar HEAD
+        git reset --soft
+
+    - Borrar HEAD y Staging
+        git reset --mixed
+
+    - Borrar HEAD, Staging y Working Directory
+        git reset --hard
+
+    - Deshacer todos los cambios después del commit indicado, preservando los cambios localmente
+        git reset 'id-commit'
+
+    - Desechar todo el historial y regresar al commit especificado
+        git reset --hard 'id-commit'
+
+* Resetar un repositorio: (es poco usual)
+    Es útil cuando se quiera dejar un repositorio como si se acabara de crear. Para ello se debe hacer lo siguiente:
+        cd carpeta-de-repositorio
+        mv .git/config ~/saved_git_config
+        rm -rf .git
+        git init
+        git branch -M main
+        git add .
+        git commit -m "Commit inicial"
+        mv ~/saved_git_config .git/config
+        git push --force origin main
+
+* Orígenes remotos de un repositorio
+    - Mostrar los orígenes remotos del repositorio actual
+        git remote
+
+    - Mostrar los orígenes remotos con detalle
+        -git remote -v
+
+    - Agregar un origen remoto
+        git remote add 'nombre-orígen' https://github.com/usuario/repositorio.git
+
+    - Renombrar un origen remoto
+        git remote rename 'nombre-viejo' 'nombre-nuevo'
+    
+    - Eliminar un origen remoto
+        git remote remove 'nombre-orígen'
+
+    - Descargar una rama remota a local diferente a la principal
+        git checkout --track -b 'rama-remota' origin/rama-remota
+
+* Etiquetas: (Permiten agregar un número de versión)
+    - Listar etiquetas existentes:
+        git tag
+
+    - Crear una etiqueta:
+        git tag 'número-versión'
+
+    - Eliminar una etiqueta:
+        git tag -d 'número-versión'
+
+    - Mostrar información de una etiqueta
+        git show 'número-versión'
+
+    - Sincronizando la etiqueta del repositorio local al remoto (se usa al crear por primera vez una etiqueta)
+        git add .
+        git tag v1.0.0
+        git commit -m "v1.0.0"
+        git push origin 'número-versión'
+
+    - Generando una etiqueta anotada (con mensaje de commit) (alternativa al método anterior)
+        git add .
+        git tag -a "v1.0.0" -m "Mensaje de la etiqueta"
+        git push --tags
+
+* GitHub Pages:
+    Permite crear un sitio web a partir de un repositorio de un proyecto almacenado en GitHub, la URL tendrá la siguiente estructura:
+        - URL del repositorio: https://github.com/usuario/repositorio
+        - URL del sitio: https://usuario.gitub.io/repositorio
+
+    Para crear esta rama especial se requieren los siguientes comandos:
+        git branch gh-pages
+        git checkout gh-pages
+
+        git remote add origin https://github.com/usuario/repositorio.git
+        git push origin gh-pages
+
+        git pull origin gh-pages
