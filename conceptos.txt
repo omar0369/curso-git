@@ -41,7 +41,7 @@ Todas las opciones de configuración en el navegador:
 
     - Commited: Es la etapa donde se encuentran los cambios finales que se enviarán al repositorio ya en línea
         git remote add origin "https://github.com/usuario/dirección-web-del-repositorio.com" (agregar el repositorio principal a dónde serán cargados los archivos desde nuestro local)
-        git push -u origin master (indicar la rama a la que serán cargados los archivos desde nuestro local)
+        git push -u origin master (se hace la primera vez que se vincula el repositorio local con el remoto, indicando el repositorio remoto y la rama a la que se cargarán los cambios)
 
     - Remote: Es ya el repositorio que se ecuentra en la red y en dónde estarán almacenados nuestros archivos
         git push (si no se cambia de rama basta con ésta instrucción para cargar nuevos cambios)
