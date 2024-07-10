@@ -46,8 +46,13 @@ Todas las opciones de configuración en el navegador:
     - Remote: Es ya el repositorio que se ecuentra en la red y en dónde estarán almacenados nuestros archivos
         git push (si no se cambia de rama basta con ésta instrucción para cargar nuevos cambios)
 
-* Crear una nueva rama y establecerla como principal:
+* Crear un nuevo repositorio y una nueva rama estableciéndola como principal:
+    - git init
+    - git add
+    - git commit -m "Mensaje del commit"
     - git branch -M main
+    - git remote add origin "https://github.com/usuario/repositorio.git"
+    - git push -u origin main
 
 * Si ya existe el repositorio:
     - git branch -M main
