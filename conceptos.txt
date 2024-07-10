@@ -136,13 +136,12 @@ Todas las opciones de configuración en el navegador:
             a) Fast-Forward: Cuando dos ramas no comparten archivos en común, no existen conflictos por resolver
             b) Manual-merge: Cuando dos ramas sí tienen archivos en común y a éstos se les realizaron cambios, por tanto se deben resolver dichos confilctos de forma manual
 
-        -Para realizar la fusión se usa el siguiente comando:
+        - Para realizar la fusión se usa el siguiente comando:
             git merge 'rama-secundaria'
 
 * Cambios:
     Se pueden agregar cambios al último commit sin la necesidad de crear uno nuevo
-
-        -Sin editar el mensaje del último commit:
+        - Sin editar el mensaje del último commit:
             git commit --amend --no-edit
 
         - Editando el mensaje del último commit:
