@@ -1,0 +1,124 @@
+commit 05eb7d29434da354b92595258395109b57c1ebaf
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Fri Jul 19 16:37:07 2024 -0600
+
+    Título del archivo html corregido
+
+commit 32c3faa3e019d9fb3f7df4e9509abee6a2e448ea
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Fri Jul 19 16:28:48 2024 -0600
+
+    Agregando dos párrafos
+
+commit 41040addb8e185285383f967d9d035a740d67658
+Merge: 00ab20e 5e1e3bf
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Fri Jul 19 16:25:35 2024 -0600
+
+    Resolviendo conflicto en estaciones del año y fechas de inicio
+
+commit 00ab20e44fd5a91ba0e2111293ada1f6e956c887
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Fri Jul 19 16:10:05 2024 -0600
+
+    Agregando estaciones del año con fecha de inicio
+
+commit 5e1e3bfcd6b1f52a69ad25f40d18ae1c960a6e23
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Fri Jul 19 16:10:05 2024 -0600
+
+    Agregando estaciones del año
+
+commit 5a55309339dc55a6f3f173c614f1afcb838c313e
+Merge: a966868 9ac052b
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 22:06:33 2024 -0600
+
+    Resolviendo conflicto merge main/html en el documento index.html
+
+commit 9ac052bf60195144e413d36a349fa61ceb14f048
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 21:59:33 2024 -0600
+
+    Agregando index.js al index.html
+
+commit a9668683039afa5b33c853214d383951ee20ed81
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 21:56:12 2024 -0600
+
+    Agregando styles.css al index.html
+
+commit 7560b54b5c881015b2433842ce150da56f8f6969
+Merge: 711dc7b 1eeac07
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 21:31:45 2024 -0600
+
+    Merge branch 'js'
+
+commit 1eeac071d63f9123081670f34a7aa1f9308ee2a5
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 20:37:24 2024 -0600
+
+    Creando archivo index.js
+
+commit 711dc7bab1345843d09bd2684a2af0df2d80a10d
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 20:32:59 2024 -0600
+
+    Creando archivo styles.css
+
+commit eee49df49ac206aab8019f0d69c8fbf6cf3adf5b
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 20:28:01 2024 -0600
+
+    Creando archivo index.html
+
+commit 41a15fd534de0fd0079e64720e2352c07f849682
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 19:57:27 2024 -0600
+
+    Ignorar archivos .exe
+
+commit b67b901202b5a28a544f701487ccf63b5925ff51
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 18:36:38 2024 -0600
+
+    Cambios a instrucciones
+
+commit 3686a28991fda87e777d69d1905f390861809dc1
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 18:31:20 2024 -0600
+
+    Eliminar master y cambios a instrucciones
+
+commit 6a76f3134d59885a4667e7367f6d92cc24875179
+Author: Omar Filio <60768771+omar0369@users.noreply.github.com>
+Date:   Tue Jul 9 17:35:33 2024 -0600
+
+    Create LICENSE
+    
+    Creando licencia del repositorio
+
+commit 4a11c529e88bb18e270d752c48b0df0c3ae9b16b
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 17:27:14 2024 -0600
+
+    Agregando contenido al README
+
+commit a67229307abeb5be3301701dedba4d6cc49ba716
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 17:24:34 2024 -0600
+
+    Corrección de instrucciones
+
+commit 1bfae045969052bcd6bc24aa0233fddf2c6b3224
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 17:10:18 2024 -0600
+
+    Agregar contenido inicial al README
+
+commit e4e54b5d75be82f43571a41bc66663c4a5044780
+Author: Omar Filio <sub_mk@hotmail.com>
+Date:   Tue Jul 9 16:59:23 2024 -0600
+
+    Primer commit

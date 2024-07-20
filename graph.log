@@ -1,0 +1,27 @@
+* 05eb7d2 Título del archivo html corregido
+* 32c3faa Agregando dos párrafos
+*   41040ad Resolviendo conflicto en estaciones del año y fechas de inicio
+|\  
+| * 5e1e3bf Agregando estaciones del año
+* | 00ab20e Agregando estaciones del año con fecha de inicio
+|/  
+*   5a55309 Resolviendo conflicto merge main/html en el documento index.html
+|\  
+| * 9ac052b Agregando index.js al index.html
+* | a966868 Agregando styles.css al index.html
+* |   7560b54 Merge branch 'js'
+|\ \  
+| * | 1eeac07 Creando archivo index.js
+* | | 711dc7b Creando archivo styles.css
+| |/  
+|/|   
+* | eee49df Creando archivo index.html
+|/  
+* 41a15fd Ignorar archivos .exe
+* b67b901 Cambios a instrucciones
+* 3686a28 Eliminar master y cambios a instrucciones
+* 6a76f31 Create LICENSE
+* 4a11c52 Agregando contenido al README
+* a672293 Corrección de instrucciones
+* 1bfae04 Agregar contenido inicial al README
+* e4e54b5 Primer commit
